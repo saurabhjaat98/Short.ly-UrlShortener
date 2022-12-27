@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{% static 'css/shortener/header.css'%}">
+    <link rel="stylesheet" href="{% static 'css/shortener/signup.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortly|Url shortener</title>
+</head>
+<body>
+    <header id="header">
+        <div id="logo">
+            <a href="{% url 'create'%}"><img src="{% static 'images/logo.png' %}" alt=" logo image"></a>
+        </div>
+    </header>
+
+    {% block content %}
+    {% endblock content %}
+
+</body>
+</html>

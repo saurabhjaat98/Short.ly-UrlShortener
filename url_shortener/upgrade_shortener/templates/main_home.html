@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/upgrade_shortener/main_home.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Shortly| UrlShortener</title>
+</head>
+
+<body>
+    <nav id="nav-bar">
+        <div id="logo">
+            <a><img src="{% static './images/logo.png'%}"></a>
+        </div>
+        <form action="/create/">
+            <button type="submit">Create Now</button>
+        </form>
+    </nav>
+    <div id="main">
+        <header id="header">
+                <form action="/upgrade_plans/" method="get">
+                 <a href="{% url 'Plans'%}"><button type="submit">Upgrade</button></a>
+                </form>
+                <div id="profile">
+                    <div id="profile-cricle">S</div>
+                    <span>{{ username}}</span>
+                </div>
+                <div id="logout">
+                    <a href="{% url 'LogOut'%}" type="button">Log Out</a>
+                </div>
+        </header>
+        <section id="section1">
+            <div id="section1-left">
+                <h1>Links</h1>
+                <button type="button">Filters</button>
+            </div>
+            <a href="{% url 'Plans'%}"><button type="button"  id="section1-right">Upgrade for custom links</button></a>
+        </section>
+        <section id="section2">
+            <div id="left-section2">
+                <div id="link-count">
+                    <p>2 Result</p>
+                </div>
+                {% if datas %}
+                {% for data in datas %}
+                <div id="links-list">
+                    <time id="link-created-data">{{data.date}}</time>
+                    <div id="link-item-title">{{data.title}}</div>
+                    <div id="zro-link">127.0.0.1:8000/{{data.domain}}/{{data.custom_half}}</div>
+                </div>
+                <br>
+                {% endfor %}
+                {% else %}
+                <p style="padding-left:20%">No Result</p>
+                {% endif %}
+            </div>
+            <div id="links-details">
+                {% if datas %}
+                {% for data in datas %}
+                <div id="header-content">
+                    <h2>{{data.title}}</h2>
+                    <div id="header-button">
+                        <a href="{% url 'EditUrl' pk=data.custom_half %}"><button id="edit-button" >edit</button></a>
+                        <a href="{% url 'deleteUrl' pk=data.custom_half%}"><button id="delete-button">delete</button></a>
+                    </div>
+                </div>
+                <div id="link-created-info">
+                    <p>{{data.datetime}}</p>
+                </div>
+                <div id="shortlink-body">
+                    <div id="shortlink-header">
+                        <a id="copy-url" href="{% url 'destination' pk=data.custom_half  %}">
+                            127.0.0.1:8000/{{data.domain}}/{{data.custom_half}}</a>
+                        <button id="copy-button" onclick="CopyUrl()">copy</button>
+                    </div>
+                    <a href={{data.destination}} id="main-url">{{data.destination}}</a>
+                </div>
+                {% endfor %}
+                {% else %}
+                <p style="padding-left:40%">No Link Selected </p>
+                {% endif %}
+            </div>
+        </section>
+
+    </div>
+    <script>
+        function CopyUrl() {
+            var copyText = document.getElementById("copy-url").innerText;
+            copyText.select;
+            navigator.clipboard.writeText(copyText);
+            alert('Copied the text:' + copyText);
+            console.log(copyText)
+        }
+    </script>
+</body>
+
+</html>

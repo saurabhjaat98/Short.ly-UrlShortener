@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- {% load static %} -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/shortener/home.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Shortly|Url shortener</title>
+</head>
+
+<body>
+    <div id="main">
+    <header id="header">
+        <div id="logo">
+            <a href="{% url 'create' %}"><img src="{% static 'images/logo.png'%}" alt=" logo image"></a>
+        </div>
+        <div id="leftHeader">
+            <ul>
+                <li><a href="{% url 'Plans' %}">Upgrade</a></li>
+                <li><a href="{% url 'LogIn' %}">Log in</a></li>
+                <li><a href=" {% url 'SignUp' %}">Sign up Free</a></li>
+            </ul>
+        </div>
+    </header>
+    <section id="main-section">
+        <section id="section1">
+            <h1>We've expanded!
+                <br>
+                Shorten URLs. Generate QR Codes.
+                <br>
+                And now, create Link-in-bios.
+            </h1>
+            <img src="{% static 'images/photo.png'%}">
+        </section>
+
+        <section id="section2">
+            <div id="shortener">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div>
+                        <input type="text" placeholder="Enter Url" name="link" required>
+                        <button id='submit' type="submit"> Shortener </button>
+                    </div>
+                </form>
+                {% for ele in data %}
+                <div id="shortenerlink">
+                    <div id="sorceurl">
+                        {{ ele.link }}
+                    </div>
+                    <div>
+                        <div id='shorturl'>
+                            <a href="{% url 'GoToMainUrl' pk=ele.uuid %}">
+                                127.0.0.1:8000/7{{ ele.uuid }}</a>
+                        </div>
+                        <div id="icons">
+                            <button class="icon" type="submit" onclick="CopyUrl()">copy
+                                <i class="fa-solid fa-copy"></i>
+                            </button>
+                            <button class="icon">
+                                <a href="{% url 'deleteShortUrl' pk=ele.uuid %}"><i class="fa-solid fa-trash"></i></a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </section>
+</div>
+
+    <script>
+        function CopyUrl() {
+            var copyText = document.getElementById("shorturl").innerText;
+            copyText.select;
+            navigator.clipboard.writeText(copyText);
+            alert('Copied the text: ' + copyText);
+            console.log(copyText)
+        }
+
+    </script>
+</body>
+
+</html>
