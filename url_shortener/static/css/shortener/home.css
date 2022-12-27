@@ -1,0 +1,140 @@
+/* header css */
+
+body{
+   color: #464c51;
+   margin:0 5rem 3rem 5rem ;
+   font-weight: 300;
+   
+}
+#main{
+   width: 100%;
+   /* border: 1px solid yellow; */
+
+
+}
+
+#header{
+   /* border: 1px solid red; */
+   width: 90%;
+   height: 6rem;
+   display: flex;
+   justify-content: space-between;
+   position: fixed;
+   background-color:white;
+   border-bottom:1px solid #d6dadd ;
+
+}
+#logo img{
+   margin-top:.5rem;
+   height: 90%;
+   width: 12vw;
+   /* border: 1px solid black; */
+
+}
+#leftHeader{
+   /* border:1px solid #1041c9; */
+   display: flex;
+   align-items: center;
+}
+#leftHeader ul{
+   list-style: none;
+   display: flex;
+}
+
+#leftHeader ul li{
+   font-size: 1.5rem;
+   margin-left: 4rem;
+}
+a{
+   text-decoration: none;
+   color: rgb(20, 20, 20);
+}
+
+
+
+
+/* section css */
+#main-section{
+   padding-top: 10rem;
+   /* border: 1px solid black; */
+   padding-bottom: 5rem;
+
+}
+
+#section1{
+   display:flex ;
+   justify-content: space-between;
+   padding-top: 0;
+   /* border: 1px solid red; */
+
+
+}
+
+#section1 h1{
+   font-size: xx-large;
+   /* border: 1px solid red; */
+   margin-top: 0;
+
+}
+
+
+#section2{
+   display: flex;
+   justify-content: center;
+}
+#shortener{
+   /* border : 1px solid red; */
+   border-radius: 5px;
+   width: 90%;
+   background-color: #122a65;
+   height: auto;
+   padding-top : 0.5rem;
+   padding-bottom: 1rem;
+   margin-top: 5rem;
+   
+}
+#submit{
+   background-color: #1041c9;
+   border-radius: 5px;
+   width:20%;
+   height: 2.2rem;
+   cursor: pointer;
+   color:white;
+}
+input{
+   width: 75%;
+   border: 1px solid #0b1736;
+   margin-left: 1rem;
+   border-radius: 5px;
+   height: 2rem;
+   
+}
+#shortenerlink{
+   width: 96%;
+   margin: 1rem 0 1rem 1rem;
+   background-color:white;
+   height: auto;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   /* border: 1px solid red; */
+}
+#sorceurl{
+   overflow-wrap:break-word;
+   width: 70%;
+   /* border: 1px solid red; */
+   height: auto;
+   display: inline;
+}
+.icon {
+   color: #1041c9;
+   border-radius: 5px;
+   margin: 0.5rem;; 
+   border: 1px solid rgb(37, 38, 39);
+   cursor: pointer;
+}
+#icons{
+   margin-left :4rem;
+   /* border: 1px solid red; */
+}
+

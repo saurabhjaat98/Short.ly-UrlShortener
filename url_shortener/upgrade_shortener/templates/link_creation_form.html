@@ -1,0 +1,27 @@
+{% extends './header.html'%}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div id="container">
+    <div id="content">
+        <h3>Create New</h3>
+    </div>
+    <form id="form" action=""  method="POST">
+      {% csrf_token %}
+        {{form.destination|as_crispy_field}}
+        {{form.title|as_crispy_field}}
+        <div class="row">
+            <div class="col-md-5">
+                {{form.domain|as_crispy_field}}
+            </div>
+            <div class="col-md-5">
+                {{form.custom_half|as_crispy_field}}
+            </div>
+        </div>
+      <div id="button">
+        <button type="submit">Create</button>
+      </div>
+    </form>
+</div>
+{% endblock content%}

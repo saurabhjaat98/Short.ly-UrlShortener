@@ -1,0 +1,29 @@
+{% extends './header.html'%}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div id="container">
+    {% if messages %}
+    {% for message in messages %}
+        <div style="color:red">{{ message }}</div>
+    {% endfor %}
+    {% endif %}
+    <div id="content">
+        <h3>Welcome To ZRO </h3>
+    </div>
+    <form id="form" action=""  method="POST">
+        <h4>Sign up and start shortening</h4>
+      {% csrf_token %}
+        {{form|crispy}}
+      <div id="button">
+        <button type="submit">Sign Up</button>
+      </div>
+    </form>
+    <div id="loginLink">
+      <small class="text-muted">Already have an account?
+        <a href="{% url 'LogIn'%}" class="ml-2">Log IN</a>
+      </small>
+    </div>
+</div>
+{% endblock content %}

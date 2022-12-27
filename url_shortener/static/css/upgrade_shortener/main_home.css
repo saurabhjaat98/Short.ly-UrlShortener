@@ -1,0 +1,233 @@
+body{
+    display: flex;
+    /* border: 1px solid red; */
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    color: #323537;
+    
+}
+button{
+    cursor: pointer;
+}
+#nav-bar{
+    width: 17%;
+    border-right: 1px solid #898b8d;
+}
+#nav-bar button{
+    background-color: #148d2e;
+    border: 1px solid #148d2e;
+    color: white;
+    width: 85%;
+    margin: 3rem 0 0 1vw;
+    height: 2rem;
+    border-radius: 5px;
+}
+
+#logo a img{
+    width: 10vw;
+    height: 900%;
+    margin:10% 0 6% 10%;
+}
+
+
+
+
+/*                        header-css                      */
+
+#main{
+    width: 85%;
+}
+#header{
+    height: 3rem;
+    padding-right: 2vw;
+    border-bottom: 1px solid #898b8d;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#header button{
+    background-color: #148d2e;
+    border: 1px solid #148d2e;
+    color: white;
+    width: 7rem;
+    margin-right: 2vw;
+    height: 2rem;
+    border-radius: 5px;
+}
+#profile{
+    display: flex;
+    /* border: 1px solid black; */
+    align-items: center;
+
+}
+#profile-cricle{
+    display: flex;
+    justify-content: center;
+    height: 2rem;
+    width:2rem;
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+    background-color: rgb(66, 66, 66);
+    border-radius:50% ;
+    margin-right: 1vw;
+}
+#logout{
+    background-color:rgb(238, 232, 232) ;
+    color: #148d2e;
+}
+#logout{
+    margin-left: 1rem;
+    width: 4rem;
+    height: 1.7rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+button:hover{
+    transform:scale(1.03);
+}
+
+/*                          section1-css                      */
+#section1{
+    /* border: 1px solid red; */
+    height: 7rem;
+    padding: 1rem 2rem 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #898b8d;
+
+}
+#section1-right{
+    width: 12rem;
+    height: 2rem;
+    background-color: #3059be;
+    border: 1px solid #3059be;
+    color: white;
+    border-radius:5px ;
+
+}
+#section1-left{
+    margin-top: -2rem; 
+    /* border: 1px solid red; */
+    width:auto;
+
+}
+#section1-left h1{
+    font-size: 2rem;
+
+}
+#section1-left button{
+    width: 5rem;
+    height: 1.7rem;
+    background-color: #3059be;
+    border: 1px solid #3059be;
+
+    color: white;
+    border-radius:5px ;
+
+}
+
+/*                       section2-css                     */
+
+#section2{
+    display: flex;
+    /* border: 1px solid red; */
+    height:70vh;
+    background-color: rgb(238, 232, 232);
+}
+
+#left-section2{
+    border-right: 1px solid #898b8d;
+    height: auto;
+    width: 30%;
+}
+#link-count{
+    border-bottom: 1px solid #898b8d;
+    padding-left: 1rem;
+    height: 1.7rem;
+    display: flex;
+    align-items: center;
+
+}
+#left-section2 h4{
+    font-weight:700;
+}
+#links-list{
+    padding:1vw 0 0 1vw;
+    background-color: white;
+    height: 6rem;
+
+}
+#link-created-data{
+    font-size: 1vw;
+
+}
+
+#link-item-title{
+    margin-bottom: .5rem;
+}
+
+#zro-link{
+    color: red;
+    font-size: 1.2vw;
+
+}
+
+#links-details{
+    width: 100%;
+    height: fit-content;
+    margin: 2rem;
+    padding: 1rem;
+    padding-right: 2rem;
+    background-color: white;
+    border-radius: 10px;
+}
+#header-content{
+    display: flex;
+    height: 2rem;
+    font-size: 1.4vw;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -.5rem;
+
+}
+#link-created-info p{
+    font-size: 1.5vw; 
+}
+#shortlink-header{
+    display: flex;
+    font-size: 1.5vw;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+    align-items: center;
+
+}
+#main-url{
+    font-size: 1.1vw;
+    
+}
+a{
+    text-decoration: none;
+}
+#edit-button{
+    width: 4rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid #898b8d;
+}
+#delete-button{
+    width: 4rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid #898b8d;
+}
+#copy-button{
+    width: 4rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid #898b8d;
+}

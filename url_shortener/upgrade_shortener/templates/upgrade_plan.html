@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="{% static './css/upgrade_shortener/upgrade_plan.css' %}" rel="stylesheet">
+    <title>Upgrade plans</title>
+</head>
+<body>
+    <div id="main">
+        <header id="header">
+            <a href=""><img src="{% static './images/logo.png'%}"></a>
+            <button id="header_button" type="button"><i class="fa-thi fa-xmark"></i></button>
+        </header>
+        <main id="section_main">
+            <section id="section1">
+                <h1>Upgrade your links.</h1>
+                <p class="description">Generate, share and track branded links for every form of communication.</p>
+                <p id="save-line">Save up to 34% when you pay annually</p>
+            </section>
+            <section id="section2">
+                <article class="box">
+                    <header>STARTER</header>
+                    <section class="inner">
+                        <section class="description_price">
+                            <div class="price">
+                                <span>$8</span>/month
+                            </div>
+                            <p class="subtital">
+                                <span class="charge_summary">(annual one-time charge of $96)</span>
+                            </p>
+                        </section>
+                        <section class='upgrade_button'>
+                            <button tupe="button">Upgrade to Starter</button>
+                        </section>
+                        <section class="details">
+                            <p>200 branded links/month</p>
+                            <p class="detail_heading">Everything in Free, plus:</p>
+                            <ul class="feature_heading">
+                                <li>Link redirects</li>
+                                <li>Data esport</li>
+                                <li>Branded links</li>
+                            </ul>
+                        </section>
+                    </section>
+                </article>
+
+                <article class="box">
+                    <header>Basic</header>
+                    <section class="inner">
+                        <section class="description_price">
+                            <div class="price">
+                                <span>$29</span>'/month'
+                            </div>
+                            <p class="subtital">
+                                <span class="charge_summary">(annual one-time charge of $348)</span>
+                            </p>
+                        </section>
+                        <section class='upgrade_button'>
+                            <button tupe="button">Upgrade to Basic</button>
+                        </section>
+                        <section class="details">
+                            <p>1,500 branded links/month</p>
+                            <p class="detail_heading">Everything in Starter, plus:</p>
+                            <ul class="feature_heading">
+                                <li>Complimentary custom domain*</li>
+                                <li>Custom link redirects</li>
+                                <li>Branded links</li>
+                            </ul>
+                        </section>
+                    </section>
+                </article>
+                <article class="box">
+                    <header>PREMIUM</header>
+                    <section class="inner">
+                        <section class="description_price">
+                            <div class="price">
+                                <span>$199</span>'/month'
+                            </div>
+                            <p class="subtital">
+                                <span class="charge_summary">(annual one-time charge of $2,388)</span>
+                            </p>
+                        </section>
+                        <section class='upgrade_button'>
+                            <button tupe="button">Upgrade to Premium</button>
+                        </section>
+                        <section class="details">
+                            <p>1,500 branded links/month</p>
+                            <p class="detail_heading">Everything in Basic, plus:</p>
+                            <ul class="feature_heading">
+                                <li>Advanced performance dashboard</li>
+                                <li>Campaigns</li>
+                                <li>QR Code multiple download formats</li>
+                            </ul>
+                        </section>
+                    </section>
+                </article>
+
+            </section>
+        </main>
+    </div>
+</body>
+</html>
